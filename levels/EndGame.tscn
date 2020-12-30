@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GFX/background/solid.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GFX/hud/hud_heart.png" type="Texture" id=3]
+[ext_resource path="res://GFX/hud/hud_coin.png" type="Texture" id=4]
+[ext_resource path="res://levels/EndGame.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 83.0
+margin_top = 89.0
+margin_right = 173.0
+margin_bottom = 135.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 90.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 29.0
+margin_right = 90.0
+margin_bottom = 46.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 5.0
+margin_right = 65.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 2 )
+text = "try Again?"
+
+[node name="restart_button" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 69.0
+margin_right = 85.0
+margin_bottom = 17.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/restart_button" to="." method="_on_restart_button_pressed"]
