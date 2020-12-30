@@ -61,7 +61,7 @@ collision_mask = 3
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
 frames = SubResource( 10 )
 animation = "fly"
-frame = 5
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -70,3 +70,4 @@ position = Vector2( 0.048871, 0.0345573 )
 shape = SubResource( 11 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Area2D"]
+[connection signal="viewport_exited" from="Area2D/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_viewport_exited"]
