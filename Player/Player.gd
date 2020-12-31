@@ -6,7 +6,7 @@ const SPEED = 250
 const GRAVITY = 25
 const UP = Vector2(0,-1)
 const JUMP_SPEED = 500
-const ACCELERATION = 30
+const ACCELERATION = 25
 
 const BOOST_MULTIPLIER = 1.5
 
