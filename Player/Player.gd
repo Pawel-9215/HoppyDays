@@ -6,10 +6,12 @@ const SPEED = 250
 const GRAVITY = 25
 const UP = Vector2(0,-1)
 const JUMP_SPEED = 500
+const ACCELERATION = 30
 
 const BOOST_MULTIPLIER = 1.5
 
 signal animate
+
 
 func _physics_process(delta):
 	apply_gravity()
@@ -17,6 +19,8 @@ func _physics_process(delta):
 	move()
 	animate()
 	move_and_slide(motion, UP)
+	if motion.x !=0:
+		print(motion)
 	
 func apply_gravity():
 	if is_on_floor() and motion.y > 0:
@@ -33,11 +37,22 @@ func jump():
 		
 func move():
 	if Input.is_action_pressed("left") and (Input.is_action_pressed("right") != true):
-		motion.x = -SPEED
+		if motion.x > -SPEED:
+			motion.x -= ACCELERATION
+		elif motion.x < -SPEED:
+			motion.x = -SPEED
 	elif Input.is_action_pressed("right") and (Input.is_action_pressed("left") != true):
-		motion.x = SPEED
+		if motion.x < SPEED:
+			motion.x += ACCELERATION
+		elif motion.x > SPEED:
+			motion.x = SPEED
 	else:
-		motion.x = 0
+		if motion.x > -ACCELERATION and motion.x < ACCELERATION:
+			motion.x = 0
+		elif motion.x > 0:
+			motion.x -= ACCELERATION
+		elif motion.x < 0:
+			motion.x += ACCELERATION
 		
 func animate():
 	emit_signal("animate", motion)

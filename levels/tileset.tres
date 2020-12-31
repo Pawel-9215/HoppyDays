@@ -5,13 +5,13 @@
 [ext_resource path="res://GFX/environment/Island2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56.5575, 7.56686 )
+extents = Vector2( 57.2172, 7.56686 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 57.8887, 3.7041 )
+extents = Vector2( 57.1788, 4.83344 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 58.9172, 6.98559 )
+extents = Vector2( 57.2172, 6.98559 )
 
 [resource]
 0/name = "gr_Island1"
@@ -43,8 +43,8 @@ extents = Vector2( 58.9172, 6.98559 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 55.5, 17 )
 1/navigation_offset = Vector2( 55.5, 17 )
-1/shape_offset = Vector2( 55.5, 21.1714 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 55.5, 21.1714 )
+1/shape_offset = Vector2( 55.5, 22.7606 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 55.5, 22.7606 )
 1/shape = SubResource( 2 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
@@ -53,7 +53,7 @@ extents = Vector2( 58.9172, 6.98559 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 55.5, 21.1714 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 55.5, 22.7606 )
 } ]
 1/z_index = 0
 2/name = "gr_Island3"

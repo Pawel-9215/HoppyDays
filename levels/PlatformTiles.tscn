@@ -5,13 +5,13 @@
 [ext_resource path="res://GFX/environment/Island2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56.5575, 7.56686 )
+extents = Vector2( 57.2172, 7.56686 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 57.8887, 3.7041 )
+extents = Vector2( 57.1788, 4.83344 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 58.9172, 6.98559 )
+extents = Vector2( 57.2172, 6.98559 )
 
 [node name="PlatformTiles" type="Node2D"]
 
@@ -32,7 +32,7 @@ texture = ExtResource( 3 )
 [node name="StaticBody2D" type="StaticBody2D" parent="gr_Island2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gr_Island2/StaticBody2D"]
-position = Vector2( 0, 4.17139 )
+position = Vector2( 0, 5.76058 )
 shape = SubResource( 2 )
 
 [node name="gr_Island3" type="Sprite" parent="."]

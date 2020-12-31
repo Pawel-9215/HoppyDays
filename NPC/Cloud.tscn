@@ -79,6 +79,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
@@ -89,7 +90,7 @@ anims/floating = SubResource( 10 )
 one_shot = true
 
 [node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite"]
-position = Vector2( 0, 28 )
+position = Vector2( 0, 42 )
 enabled = true
 cast_to = Vector2( 0, 256 )
 [connection signal="timeout" from="AnimatedSprite/Timer" to="." method="_on_Timer_timeout"]
